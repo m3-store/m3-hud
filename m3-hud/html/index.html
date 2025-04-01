@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Hud By Abo3of</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Ovo&family=Press+Start+2P&family=Source+Sans+Pro&family=VT323&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css">
+    <link rel="stylesheet" href="svgTimer.min.css">
+</head>
+<body>
+    <div id="menusettings">
+    <div class="settings-container">
+        <h2 id="MENU-LABEL">HUD Settings</h2>
+        <label for="minimap-toggle" id="minimap-label">Minimap:</label>
+        <input type="checkbox" id="minimap-toggle" checked>
+</div>
+    <div class="hud-main">
+        <div class="hud">
+            <div class="box-hud" id="mic">
+            <i class="fa-sharp fa-solid fa-microphone-lines-slash" id="Mic-Icon"></i> 
+            <div class="svg-test" id="svg-mic">
+                <div class="pressent" id="mic-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hud" id="healthhud">
+            <div class="box-hud" id="health">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div class="svg-test" id="svg-health">
+                <div class="pressent" id="health-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hud" id="armorhud">
+            <div class="box-hud" id="armor">
+            <i class="fas fa-shield-quartered"></i>
+            <div class="svg-test" id="svg-armor">
+                <div class="pressent" id="armor-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hud" id="eathud">
+            <div class="box-hud" id="eat">
+            <i class="fa-solid fa-pot-food"></i>
+            <div class="svg-test" id="svg-eat">
+                <div class="pressent" id="eat-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hud" id="waterhud">
+            <div class="box-hud" id="water">
+            <i class="fa-solid fa-droplet"></i>
+            <div class="svg-test" id="svg-water">
+                <div class="pressent" id="water-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hud" id="walkhud">
+    <div class="box-hud" id="walk">
+            <i class="fas fa-person-walking"></i>
+            <div class="svg-test" id="svg-walk">
+                <div class="pressent" id="walk-pressent">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="hud-car" style="display: none;">
+        <div class="hud-rpm" >
+            <div class="hud-first">
+                <div class="hud-rpm-fuel-engine">
+                    <div class="seat-circle">
+                        <i class="fa-solid fa-person-seat"></i>
+                    </div>
+                    <div class="fuel-circle">
+                        <i class="fa-light fa-gas-pump"></i>
+                        <div class="svg-fuel" id="svg-fuel">
+                            <div class="svg-pressent-fuel" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engine-circle">
+                        <i class="fa-light fa-engine"></i>
+                        <div class="svg-engine" id="svg-engine">
+                            <div class="svg-pressent-engine" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hud-rpm-lables-and-segemets">
+                    <div class="first-hud-rpm-lablels">
+                        <h5 class="label-kmh">KM/H</h5>
+                        <h1 class="km">001</h1>
+                    </div>
+                    <div class="gear">
+                        <h3 class="gear-label">R</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="hud-seggemts" id="rpmBar">
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 1px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 3px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 5px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 7px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 9px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 11px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 13px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 15px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 17px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 19px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 21px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; left: 23px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; margin-right: 0px; left: 25px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; left: 27px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; left: 29px;"><div class="inner-seggement"></div></div>
+                <div class="seggement" style="margin-bottom: 0px; position: relative; left: 31px; margin-right: 0px;"><div class="inner-seggement"></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
